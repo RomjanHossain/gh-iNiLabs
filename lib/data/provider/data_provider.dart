@@ -7,7 +7,7 @@ import 'package:gh/utils/status_.dart';
 class DatabaseProvider {
   // get the profile repo
   Future<Status<GithubProfileModel, Exception>> getGithubProfile(
-      String username) {
-    return GetGithubProfileRepo(username).fetchProfile();
+      String username) async {
+    return await GetGithubProfileRepo(username).fetchProfile();
   }
 }
