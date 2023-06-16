@@ -2,12 +2,12 @@ sealed class Status<G, E extends Exception> {
   const Status();
 }
 
-final class Success<G, E extends Exception> extends Status<G, E> {
+final class SuccessStatus<G, E extends Exception> extends Status<G, E> {
   final G data;
-  const Success(this.data);
+  const SuccessStatus(this.data);
 }
 
-final class Error<G, E extends Exception> extends Status<G, E> {
+final class ErrorStatus<G, E extends Exception> extends Status<G, E> {
   final E execption;
-  const Error(this.execption);
+  const ErrorStatus(this.execption);
 }
