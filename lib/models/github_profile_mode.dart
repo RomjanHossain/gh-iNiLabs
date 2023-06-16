@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:json_annotation/json_annotation.dart';
 part 'github_profile_mode.g.dart';
 
@@ -5,44 +7,44 @@ part 'github_profile_mode.g.dart';
 class GithubProfileModel {
   final String login;
   final int id;
-  final String avatarUrl;
+  final String avatar_url;
   final String url;
-  final String htmlUrl;
-  final String followersUrl;
-  final String followingUrl;
-  final String reposUrl;
+  final String html_url;
+  final String followers_url;
+  final String following_url;
+  final String repos_url;
   final String name;
   final String blog;
   final String location;
   final String bio;
-  final String twitterUsername;
-  final int publicRepos;
-  final int publicGists;
+  final String twitter_username;
+  final int public_repos;
+  final int public_gists;
   final int followers;
   final int following;
-  final String createdAt;
-  final String updatedAt;
+  final String created_at;
+  final String updated_at;
 
   GithubProfileModel({
     required this.login,
     required this.id,
-    required this.avatarUrl,
+    required this.avatar_url,
     required this.url,
-    required this.htmlUrl,
-    required this.followersUrl,
-    required this.followingUrl,
-    required this.reposUrl,
+    required this.html_url,
+    required this.followers_url,
+    required this.following_url,
+    required this.repos_url,
     required this.name,
     required this.blog,
     required this.location,
     required this.bio,
-    required this.twitterUsername,
-    required this.publicRepos,
-    required this.publicGists,
+    required this.twitter_username,
+    required this.public_repos,
+    required this.public_gists,
     required this.followers,
     required this.following,
-    required this.createdAt,
-    required this.updatedAt,
+    required this.created_at,
+    required this.updated_at,
   });
 
   // convert from jsno
