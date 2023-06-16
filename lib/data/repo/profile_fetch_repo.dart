@@ -13,16 +13,21 @@ class GetGithubProfileRepo {
   Future<Status<GithubProfileModel, Exception>> fetchProfile() async {
     try {
       final url = Uri.parse('https://api.github.com/users/$username');
+      print(url);
       final response = await http.get(url);
       if (response.statusCode == 200) {
         final jsonResult = jsonDecode(response.body);
+        // print('json Result: ${jsonResult}');
         final profile = GithubProfileModel.fromJson(jsonResult);
-        return Success(profile);
+        print('profile name: ${profile.name}');
+        return SuccessStatus(profile);
       } else {
-        return Error(Exception('Error fetching profile'));
+        print('response.body: ${response.body}\n'
+            'response.statusCode: ${response.statusCode}');
+        return ErrorStatus(Exception('Error fetching profile'));
       }
     } catch (e) {
-      return Error(Exception('Error fetching profile'));
+      return ErrorStatus(Exception('Error fetching profile'));
     }
   }
 }
