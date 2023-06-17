@@ -13,8 +13,14 @@ class DatabaseProvider {
   }
 
   // get the repos
-  Future<Status<List<GithutRepoModel>, Exception>> getGithubRepos(
+  Future<Status<(List<GithutRepoModel>, bool), Exception>> getGithubRepos(
       String username) async {
     return await GetGithubProfileRepo(username).fetchRepos();
+  }
+
+  // get next repos
+  Future<Status<(List<GithutRepoModel>, bool, int), Exception>>
+      getGithubReposNxt(String username, int page) async {
+    return await GetGithubProfileRepo(username).fetchNextRepos(page);
   }
 }
