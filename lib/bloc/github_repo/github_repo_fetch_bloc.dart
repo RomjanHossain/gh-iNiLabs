@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:bloc/bloc.dart';
 import 'package:gh/models/github_repo_model.dart';
@@ -64,6 +63,8 @@ class GithubRepoFetchBloc
       List<GithutRepoModel> newList = value.$1;
       // add this newList to the previous list
       _list.addAll(newList);
+      // remove all the duplicates
+      _list = _list.toSet().toList();
       // value.GithubRepoFetchModel.addAll(value.GithubRepoFetchModel);
       emit(GithubRepoFetchLoaded(_list, value.$2, value.$3));
     }

@@ -1,6 +1,5 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gh/bloc/github_fetch/github_profile_bloc.dart';
 import 'package:gh/models/github_profile_mode.dart';
@@ -20,11 +19,11 @@ import '../../shapes/follower.dart';
 import '../../shapes/update.dart';
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({super.key});
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ScrollController _scrollController = ScrollController();
+    ScrollController scrollController = ScrollController();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Github Profile'),
@@ -66,7 +65,7 @@ class MyHomePage extends StatelessWidget {
             String updatedAtReadable =
                 DateFormat('MMMM d, yyyy at h:mm a').format(updatedDateTime);
             return ListView(
-              controller: _scrollController,
+              controller: scrollController,
               children: [
                 Stack(
                   children: [
@@ -272,7 +271,7 @@ class MyHomePage extends StatelessWidget {
         },
       ),
       floatingActionButton: CustomFAB(
-        scrollController: _scrollController,
+        scrollController: scrollController,
       ),
     );
   }

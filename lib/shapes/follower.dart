@@ -18,9 +18,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: false);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = Color(0xfffed759).withOpacity(1.0);
-    canvas.drawPath(path_0, paint_0_fill);
+    Paint paint0Fill = Paint()..style = PaintingStyle.fill;
+    paint0Fill.color = const Color(0xfffed759).withOpacity(1.0);
+    canvas.drawPath(path_0, paint0Fill);
 
     Path path_1 = Path();
     path_1.moveTo(size.width * 0.1093750, size.height * 0.2500000);
@@ -29,9 +29,9 @@ class FollowerPainter extends CustomPainter {
     path_1.lineTo(size.width * 0.1093750, size.height * 0.6562500);
     path_1.close();
 
-    Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
-    paint_1_fill.color = Color(0xfff6646c).withOpacity(1.0);
-    canvas.drawPath(path_1, paint_1_fill);
+    Paint paint1Fill = Paint()..style = PaintingStyle.fill;
+    paint1Fill.color = const Color(0xfff6646c).withOpacity(1.0);
+    canvas.drawPath(path_1, paint1Fill);
 
     Path path_2 = Path();
     path_2.moveTo(size.width * 0.1562500, size.height * 0.2500000);
@@ -46,9 +46,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_2.close();
 
-    Paint paint_2_fill = Paint()..style = PaintingStyle.fill;
-    paint_2_fill.color = Color(0xfff6646c).withOpacity(1.0);
-    canvas.drawPath(path_2, paint_2_fill);
+    Paint paint2Fill = Paint()..style = PaintingStyle.fill;
+    paint2Fill.color = const Color(0xfff6646c).withOpacity(1.0);
+    canvas.drawPath(path_2, paint2Fill);
 
     Path path_3 = Path();
     path_3.moveTo(size.width * 0.9687500, size.height * 0.4375000);
@@ -79,9 +79,9 @@ class FollowerPainter extends CustomPainter {
     path_3.lineTo(size.width * 0.8593750, size.height * 0.4375000);
     path_3.close();
 
-    Paint paint_3_fill = Paint()..style = PaintingStyle.fill;
-    paint_3_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_3, paint_3_fill);
+    Paint paint3Fill = Paint()..style = PaintingStyle.fill;
+    paint3Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_3, paint3Fill);
 
     Path path_4 = Path();
     path_4.moveTo(size.width * 0.5468750, size.height * 0.6562500);
@@ -95,9 +95,9 @@ class FollowerPainter extends CustomPainter {
     path_4.lineTo(size.width * 0.1093750, size.height * 0.9531250);
     path_4.close();
 
-    Paint paint_4_fill = Paint()..style = PaintingStyle.fill;
-    paint_4_fill.color = Color(0xff0e3e86).withOpacity(1.0);
-    canvas.drawPath(path_4, paint_4_fill);
+    Paint paint4Fill = Paint()..style = PaintingStyle.fill;
+    paint4Fill.color = const Color(0xff0e3e86).withOpacity(1.0);
+    canvas.drawPath(path_4, paint4Fill);
 
     Path path_5 = Path();
     path_5.moveTo(size.width * 0.5468750, size.height * 0.2500000);
@@ -106,9 +106,9 @@ class FollowerPainter extends CustomPainter {
     path_5.lineTo(size.width * 0.5468750, size.height * 0.6562500);
     path_5.close();
 
-    Paint paint_5_fill = Paint()..style = PaintingStyle.fill;
-    paint_5_fill.color = Color(0xfffed759).withOpacity(1.0);
-    canvas.drawPath(path_5, paint_5_fill);
+    Paint paint5Fill = Paint()..style = PaintingStyle.fill;
+    paint5Fill.color = const Color(0xfffed759).withOpacity(1.0);
+    canvas.drawPath(path_5, paint5Fill);
 
     Path path_6 = Path();
     path_6.moveTo(size.width * 0.7031250, size.height * 0.1562500);
@@ -128,9 +128,9 @@ class FollowerPainter extends CustomPainter {
     path_6.lineTo(size.width * 0.7578125, size.height * 0.1562500);
     path_6.close();
 
-    Paint paint_6_fill = Paint()..style = PaintingStyle.fill;
-    paint_6_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_6, paint_6_fill);
+    Paint paint6Fill = Paint()..style = PaintingStyle.fill;
+    paint6Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_6, paint6Fill);
 
     Path path_7 = Path();
     path_7.moveTo(size.width * 0.5859375, size.height * 0.4375000);
@@ -156,9 +156,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_7.close();
 
-    Paint paint_7_fill = Paint()..style = PaintingStyle.fill;
-    paint_7_fill.color = Color(0xffffbc2b).withOpacity(1.0);
-    canvas.drawPath(path_7, paint_7_fill);
+    Paint paint7Fill = Paint()..style = PaintingStyle.fill;
+    paint7Fill.color = const Color(0xffffbc2b).withOpacity(1.0);
+    canvas.drawPath(path_7, paint7Fill);
 
     Path path_8 = Path();
     path_8.moveTo(size.width * 0.3125000, size.height * 0.3750000);
@@ -167,9 +167,9 @@ class FollowerPainter extends CustomPainter {
     path_8.lineTo(size.width * 0.3125000, size.height * 0.8125000);
     path_8.close();
 
-    Paint paint_8_fill = Paint()..style = PaintingStyle.fill;
-    paint_8_fill.color = Color(0xff5f86fe).withOpacity(1.0);
-    canvas.drawPath(path_8, paint_8_fill);
+    Paint paint8Fill = Paint()..style = PaintingStyle.fill;
+    paint8Fill.color = const Color(0xff5f86fe).withOpacity(1.0);
+    canvas.drawPath(path_8, paint8Fill);
 
     Path path_9 = Path();
     path_9.moveTo(size.width * 0.3125000, size.height * 0.8125000);
@@ -178,9 +178,9 @@ class FollowerPainter extends CustomPainter {
     path_9.lineTo(size.width * 0.3125000, size.height * 0.9531250);
     path_9.close();
 
-    Paint paint_9_fill = Paint()..style = PaintingStyle.fill;
-    paint_9_fill.color = Color(0xff1b53a6).withOpacity(1.0);
-    canvas.drawPath(path_9, paint_9_fill);
+    Paint paint9Fill = Paint()..style = PaintingStyle.fill;
+    paint9Fill.color = const Color(0xff1b53a6).withOpacity(1.0);
+    canvas.drawPath(path_9, paint9Fill);
 
     Path path_10 = Path();
     path_10.moveTo(size.width * 0.2500000, size.height * 0.1562500);
@@ -200,9 +200,9 @@ class FollowerPainter extends CustomPainter {
     path_10.lineTo(size.width * 0.3046875, size.height * 0.1562500);
     path_10.close();
 
-    Paint paint_10_fill = Paint()..style = PaintingStyle.fill;
-    paint_10_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_10, paint_10_fill);
+    Paint paint10Fill = Paint()..style = PaintingStyle.fill;
+    paint10Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_10, paint10Fill);
 
     Path path_11 = Path();
     path_11.moveTo(size.width * 0.9687500, size.height * 0.3085938);
@@ -218,9 +218,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_11.close();
 
-    Paint paint_11_fill = Paint()..style = PaintingStyle.fill;
-    paint_11_fill.color = Color(0xfffed759).withOpacity(1.0);
-    canvas.drawPath(path_11, paint_11_fill);
+    Paint paint11Fill = Paint()..style = PaintingStyle.fill;
+    paint11Fill.color = const Color(0xfffed759).withOpacity(1.0);
+    canvas.drawPath(path_11, paint11Fill);
 
     Path path_12 = Path();
     path_12.moveTo(size.width * 0.1953125, size.height * 0.7578125);
@@ -251,9 +251,9 @@ class FollowerPainter extends CustomPainter {
     path_12.lineTo(size.width * 0.1562500, size.height * 0.7343750);
     path_12.close();
 
-    Paint paint_12_fill = Paint()..style = PaintingStyle.fill;
-    paint_12_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_12, paint_12_fill);
+    Paint paint12Fill = Paint()..style = PaintingStyle.fill;
+    paint12Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_12, paint12Fill);
 
     Path path_13 = Path();
     path_13.moveTo(size.width * 0.6484375, size.height * 0.3437500);
@@ -337,9 +337,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_13.close();
 
-    Paint paint_13_fill = Paint()..style = PaintingStyle.fill;
-    paint_13_fill.color = Color(0xff1b53a6).withOpacity(1.0);
-    canvas.drawPath(path_13, paint_13_fill);
+    Paint paint13Fill = Paint()..style = PaintingStyle.fill;
+    paint13Fill.color = const Color(0xff1b53a6).withOpacity(1.0);
+    canvas.drawPath(path_13, paint13Fill);
 
     Path path_14 = Path();
     path_14.moveTo(size.width * 0.4687500, size.height * 0.2812500);
@@ -348,9 +348,9 @@ class FollowerPainter extends CustomPainter {
     path_14.lineTo(size.width * 0.4687500, size.height * 0.4218750);
     path_14.close();
 
-    Paint paint_14_fill = Paint()..style = PaintingStyle.fill;
-    paint_14_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_14, paint_14_fill);
+    Paint paint14Fill = Paint()..style = PaintingStyle.fill;
+    paint14Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_14, paint14Fill);
 
     Path path_15 = Path();
     path_15.moveTo(size.width * 0.5625000, size.height * 0.3750000);
@@ -362,9 +362,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_15.close();
 
-    Paint paint_15_fill = Paint()..style = PaintingStyle.fill;
-    paint_15_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_15, paint_15_fill);
+    Paint paint15Fill = Paint()..style = PaintingStyle.fill;
+    paint15Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_15, paint15Fill);
 
     Path path_16 = Path();
     path_16.moveTo(size.width * 0.3593750, size.height * 0.3750000);
@@ -379,9 +379,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_16.close();
 
-    Paint paint_16_fill = Paint()..style = PaintingStyle.fill;
-    paint_16_fill.color = Color(0xff5f86fe).withOpacity(1.0);
-    canvas.drawPath(path_16, paint_16_fill);
+    Paint paint16Fill = Paint()..style = PaintingStyle.fill;
+    paint16Fill.color = const Color(0xff5f86fe).withOpacity(1.0);
+    canvas.drawPath(path_16, paint16Fill);
 
     Path path_17 = Path();
     path_17.moveTo(size.width * 0.6406250, size.height * 0.6375586);
@@ -404,9 +404,9 @@ class FollowerPainter extends CustomPainter {
     path_17.lineTo(size.width * 0.3593750, size.height * 0.6708594);
     path_17.close();
 
-    Paint paint_17_fill = Paint()..style = PaintingStyle.fill;
-    paint_17_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_17, paint_17_fill);
+    Paint paint17Fill = Paint()..style = PaintingStyle.fill;
+    paint17Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_17, paint17Fill);
 
     Path path_18 = Path();
     path_18.moveTo(size.width * 0.7500000, size.height * 0.4335938);
@@ -422,9 +422,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_18.close();
 
-    Paint paint_18_fill = Paint()..style = PaintingStyle.fill;
-    paint_18_fill.color = Color(0xff5f86fe).withOpacity(1.0);
-    canvas.drawPath(path_18, paint_18_fill);
+    Paint paint18Fill = Paint()..style = PaintingStyle.fill;
+    paint18Fill.color = const Color(0xff5f86fe).withOpacity(1.0);
+    canvas.drawPath(path_18, paint18Fill);
 
     Path path_19 = Path();
     path_19.moveTo(size.width * 0.7500000, size.height * 0.5625000);
@@ -441,9 +441,9 @@ class FollowerPainter extends CustomPainter {
     path_19.lineTo(size.width * 0.6406250, size.height * 0.5625000);
     path_19.close();
 
-    Paint paint_19_fill = Paint()..style = PaintingStyle.fill;
-    paint_19_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_19, paint_19_fill);
+    Paint paint19Fill = Paint()..style = PaintingStyle.fill;
+    paint19Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_19, paint19Fill);
 
     Path path_20 = Path();
     path_20.moveTo(size.width * 0.3593750, size.height * 0.5625000);
@@ -491,9 +491,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_20.close();
 
-    Paint paint_20_fill = Paint()..style = PaintingStyle.fill;
-    paint_20_fill.color = Color(0xff3a69ff).withOpacity(1.0);
-    canvas.drawPath(path_20, paint_20_fill);
+    Paint paint20Fill = Paint()..style = PaintingStyle.fill;
+    paint20Fill.color = const Color(0xff3a69ff).withOpacity(1.0);
+    canvas.drawPath(path_20, paint20Fill);
 
     Path path_21 = Path();
     path_21.moveTo(size.width * 0.9062500, size.height * 0.4375000);
@@ -519,9 +519,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_21.close();
 
-    Paint paint_21_fill = Paint()..style = PaintingStyle.fill;
-    paint_21_fill.color = Color(0xffffbc2b).withOpacity(1.0);
-    canvas.drawPath(path_21, paint_21_fill);
+    Paint paint21Fill = Paint()..style = PaintingStyle.fill;
+    paint21Fill.color = const Color(0xffffbc2b).withOpacity(1.0);
+    canvas.drawPath(path_21, paint21Fill);
 
     Path path_22 = Path();
     path_22.moveTo(size.width * 0.1562500, size.height * 0.4375000);
@@ -547,9 +547,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_22.close();
 
-    Paint paint_22_fill = Paint()..style = PaintingStyle.fill;
-    paint_22_fill.color = Color(0xfff2444e).withOpacity(1.0);
-    canvas.drawPath(path_22, paint_22_fill);
+    Paint paint22Fill = Paint()..style = PaintingStyle.fill;
+    paint22Fill.color = const Color(0xfff2444e).withOpacity(1.0);
+    canvas.drawPath(path_22, paint22Fill);
 
     Path path_23 = Path();
     path_23.moveTo(size.width * 0.4921875, size.height * 0.3125000);
@@ -564,9 +564,9 @@ class FollowerPainter extends CustomPainter {
     path_23.lineTo(size.width * 0.4921875, size.height * 0.3125000);
     path_23.close();
 
-    Paint paint_23_fill = Paint()..style = PaintingStyle.fill;
-    paint_23_fill.color = Color(0xffe67199).withOpacity(1.0);
-    canvas.drawPath(path_23, paint_23_fill);
+    Paint paint23Fill = Paint()..style = PaintingStyle.fill;
+    paint23Fill.color = const Color(0xffe67199).withOpacity(1.0);
+    canvas.drawPath(path_23, paint23Fill);
 
     Path path_24 = Path();
     path_24.moveTo(size.width * 0.5546875, size.height * 0.2187500);
@@ -586,9 +586,9 @@ class FollowerPainter extends CustomPainter {
     path_24.lineTo(size.width * 0.4687500, size.height * 0.2187500);
     path_24.close();
 
-    Paint paint_24_fill = Paint()..style = PaintingStyle.fill;
-    paint_24_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_24, paint_24_fill);
+    Paint paint24Fill = Paint()..style = PaintingStyle.fill;
+    paint24Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_24, paint24Fill);
 
     Path path_25 = Path();
     path_25.moveTo(size.width * 0.5625000, size.height * 0.2500000);
@@ -610,14 +610,14 @@ class FollowerPainter extends CustomPainter {
     path_25.lineTo(size.width * 0.5625000, size.height * 0.1875000);
     path_25.close();
 
-    Paint paint_25_fill = Paint()..style = PaintingStyle.fill;
-    paint_25_fill.color = Color(0xff1b53a6).withOpacity(1.0);
-    canvas.drawPath(path_25, paint_25_fill);
+    Paint paint25Fill = Paint()..style = PaintingStyle.fill;
+    paint25Fill.color = const Color(0xff1b53a6).withOpacity(1.0);
+    canvas.drawPath(path_25, paint25Fill);
 
-    Paint paint_26_fill = Paint()..style = PaintingStyle.fill;
-    paint_26_fill.color = Color(0xffffb3d0).withOpacity(1.0);
+    Paint paint26Fill = Paint()..style = PaintingStyle.fill;
+    paint26Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
     canvas.drawCircle(Offset(size.width * 0.4687500, size.height * 0.2792969),
-        size.width * 0.02343750, paint_26_fill);
+        size.width * 0.02343750, paint26Fill);
 
     Path path_27 = Path();
     path_27.moveTo(size.width * 0.2734375, size.height * 0.1875000);
@@ -643,9 +643,9 @@ class FollowerPainter extends CustomPainter {
     path_27.lineTo(size.width * 0.7265625, size.height * 0.1875000);
     path_27.close();
 
-    Paint paint_27_fill = Paint()..style = PaintingStyle.fill;
-    paint_27_fill.color = Color(0xffe67199).withOpacity(1.0);
-    canvas.drawPath(path_27, paint_27_fill);
+    Paint paint27Fill = Paint()..style = PaintingStyle.fill;
+    paint27Fill.color = const Color(0xffe67199).withOpacity(1.0);
+    canvas.drawPath(path_27, paint27Fill);
 
     Path path_28 = Path();
     path_28.moveTo(size.width * 0.7890625, size.height * 0.09375000);
@@ -665,9 +665,9 @@ class FollowerPainter extends CustomPainter {
     path_28.lineTo(size.width * 0.7031250, size.height * 0.09375000);
     path_28.close();
 
-    Paint paint_28_fill = Paint()..style = PaintingStyle.fill;
-    paint_28_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_28, paint_28_fill);
+    Paint paint28Fill = Paint()..style = PaintingStyle.fill;
+    paint28Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_28, paint28Fill);
 
     Path path_29 = Path();
     path_29.moveTo(size.width * 0.8281250, size.height * 0.06250000);
@@ -702,14 +702,14 @@ class FollowerPainter extends CustomPainter {
     path_29.lineTo(size.width * 0.7806816, size.height * 0.06250000);
     path_29.close();
 
-    Paint paint_29_fill = Paint()..style = PaintingStyle.fill;
-    paint_29_fill.color = Color(0xff1b53a6).withOpacity(1.0);
-    canvas.drawPath(path_29, paint_29_fill);
+    Paint paint29Fill = Paint()..style = PaintingStyle.fill;
+    paint29Fill.color = const Color(0xff1b53a6).withOpacity(1.0);
+    canvas.drawPath(path_29, paint29Fill);
 
-    Paint paint_30_fill = Paint()..style = PaintingStyle.fill;
-    paint_30_fill.color = Color(0xffffb3d0).withOpacity(1.0);
+    Paint paint30Fill = Paint()..style = PaintingStyle.fill;
+    paint30Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
     canvas.drawCircle(Offset(size.width * 0.7031250, size.height * 0.1562500),
-        size.width * 0.02343750, paint_30_fill);
+        size.width * 0.02343750, paint30Fill);
 
     Path path_31 = Path();
     path_31.moveTo(size.width * 0.3359375, size.height * 0.09375000);
@@ -729,9 +729,9 @@ class FollowerPainter extends CustomPainter {
     path_31.lineTo(size.width * 0.2500000, size.height * 0.09375000);
     path_31.close();
 
-    Paint paint_31_fill = Paint()..style = PaintingStyle.fill;
-    paint_31_fill.color = Color(0xffffb3d0).withOpacity(1.0);
-    canvas.drawPath(path_31, paint_31_fill);
+    Paint paint31Fill = Paint()..style = PaintingStyle.fill;
+    paint31Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
+    canvas.drawPath(path_31, paint31Fill);
 
     Path path_32 = Path();
     path_32.moveTo(size.width * 0.3750000, size.height * 0.08175586);
@@ -765,14 +765,14 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_32.close();
 
-    Paint paint_32_fill = Paint()..style = PaintingStyle.fill;
-    paint_32_fill.color = Color(0xff1b53a6).withOpacity(1.0);
-    canvas.drawPath(path_32, paint_32_fill);
+    Paint paint32Fill = Paint()..style = PaintingStyle.fill;
+    paint32Fill.color = const Color(0xff1b53a6).withOpacity(1.0);
+    canvas.drawPath(path_32, paint32Fill);
 
-    Paint paint_33_fill = Paint()..style = PaintingStyle.fill;
-    paint_33_fill.color = Color(0xffffb3d0).withOpacity(1.0);
+    Paint paint33Fill = Paint()..style = PaintingStyle.fill;
+    paint33Fill.color = const Color(0xffffb3d0).withOpacity(1.0);
     canvas.drawCircle(Offset(size.width * 0.2500000, size.height * 0.1562500),
-        size.width * 0.02343750, paint_33_fill);
+        size.width * 0.02343750, paint33Fill);
 
     Path path_34 = Path();
     path_34.moveTo(size.width * 0.3437500, size.height * 0.7785566);
@@ -806,9 +806,9 @@ class FollowerPainter extends CustomPainter {
         clockwise: true);
     path_34.close();
 
-    Paint paint_34_fill = Paint()..style = PaintingStyle.fill;
-    paint_34_fill.color = Color(0xffff9ac0).withOpacity(1.0);
-    canvas.drawPath(path_34, paint_34_fill);
+    Paint paint34Fill = Paint()..style = PaintingStyle.fill;
+    paint34Fill.color = const Color(0xffff9ac0).withOpacity(1.0);
+    canvas.drawPath(path_34, paint34Fill);
   }
 
   @override

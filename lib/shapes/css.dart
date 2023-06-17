@@ -12,9 +12,9 @@ class CssPainter extends CustomPainter {
     path_0.lineTo(size.width * 0.9375000, 0);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = Color(0xff2196f3).withOpacity(1.0);
-    canvas.drawPath(path_0, paint_0_fill);
+    Paint paint0Fill = Paint()..style = PaintingStyle.fill;
+    paint0Fill.color = const Color(0xff2196f3).withOpacity(1.0);
+    canvas.drawPath(path_0, paint0Fill);
 
     Path path_1 = Path();
     path_1.moveTo(size.width * 0.7671250, size.height * 0.2943125);
@@ -39,9 +39,9 @@ class CssPainter extends CustomPainter {
     path_1.lineTo(size.width * 0.7770000, size.height * 0.1840000);
     path_1.close();
 
-    Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
-    paint_1_fill.color = Color(0xfffafafa).withOpacity(1.0);
-    canvas.drawPath(path_1, paint_1_fill);
+    Paint paint1Fill = Paint()..style = PaintingStyle.fill;
+    paint1Fill.color = const Color(0xfffafafa).withOpacity(1.0);
+    canvas.drawPath(path_1, paint1Fill);
   }
 
   @override

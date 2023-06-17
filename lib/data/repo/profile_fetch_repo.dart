@@ -80,7 +80,7 @@ class GetGithubProfileRepo {
       print('has next page $page');
       try {
         final url = Uri.parse(
-            'https://api.github.com/users/$username/repos?page=${page}');
+            'https://api.github.com/users/$username/repos?page=$page');
         final response = await http.get(url);
         if (response.statusCode == 200) {
           print('status code: ${response.statusCode}');
