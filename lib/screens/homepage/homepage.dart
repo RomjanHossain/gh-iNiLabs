@@ -240,6 +240,7 @@ class MyHomePage extends StatelessWidget {
                       child: const Text('View Repos'),
                     ),
                   ),
+                  closedElevation: 0,
                   transitionDuration: const Duration(milliseconds: 500),
                   closedShape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
