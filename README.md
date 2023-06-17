@@ -23,11 +23,30 @@ A Flutter Project using the Github API to search for users and repositories.
 
 ## Here's some screenshots of the app:
 <!-- show screenshot which are in the screenshot fodler -->
-<img src="./screenshots/1.png" >
-<img src="./screenshots/2.png" >
-<img src="./screenshots/3.png" >
-<img src="./screenshots/4.png" >
-<img src="./screenshots/5.png" >
-<img src="./screenshots/6.png" >
+
+
+<table>
+  <tr>
+    <td>
+      <img src="./screenshots/1.png" >
+    </td>
+    <td>
+      <img src="./screenshots/2.png" >
+    </td>
+    <td>
+      <img src="./screenshots/3.png" >
+    </td>
+    <td>
+      <img src="./screenshots/4.png" >
+    </td>
+    <td>
+      <img src="./screenshots/5.png" >
+    </td>
+    <td>
+      <img src="./screenshots/6.png" >
+    </td>
+  </tr>
+</table>
+
 
 ## Goto Release Page to download the apk file
