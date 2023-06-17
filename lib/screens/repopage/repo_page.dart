@@ -1,5 +1,8 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gh/screens/view_repo/view_repo.dart';
+import 'package:intl/intl.dart';
 
 import '../../bloc/github_repo/github_repo_fetch_bloc.dart';
 
@@ -88,7 +91,10 @@ class _GithubReposScreenState extends State<GithubReposScreen> {
             return GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: isGrid ? 2 : 1,
-                childAspectRatio: 2,
+                childAspectRatio: isGrid ? 1.5 : 1.2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 5,
+                mainAxisExtent: isGrid ? 150 : null,
               ),
               itemCount: state.GithubRepoFetchModel.length,
               itemBuilder: (context, index) {
@@ -118,18 +124,92 @@ class _GithubReposScreenState extends State<GithubReposScreen> {
                     GithubRepoFetchPaginated(widget.username, state.pageNumber),
                   );
                 }
-                return Card(
-                  child: ListTile(
-                    // leading: CircleAvatar(
-                    //   child: Text(index.toString()),
-                    // ),
-                    title: Text(repo.name),
-                    subtitle: isGrid
-                        ? null
-                        : Text(repo.description ?? 'No description'),
-                    trailing:
-                        isGrid ? null : Text(repo.language ?? 'No language'),
-                  ),
+                // Create a DateTime object from each timestamp.
+                DateTime createdDateTime = DateTime.parse(repo.created_at);
+                DateTime updatedDateTime = DateTime.parse(repo.updated_at);
+
+                // Format the DateTime objects to human-readable strings.
+                String createdAtReadable =
+                    DateFormat('MMMM d, yyyy').format(createdDateTime);
+                String updatedAtReadable = DateFormat('MMMM d, yyyy at h:mm a')
+                    .format(updatedDateTime);
+                return OpenContainer(
+                  closedBuilder: (c, b) {
+                    return Card(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ListTile(
+                            title: Text(
+                              repo.name,
+                              textAlign: TextAlign.center,
+                              style: isGrid
+                                  ? null
+                                  : Theme.of(context).textTheme.headlineMedium,
+                            ),
+                            subtitle: isGrid
+                                ? null
+                                : Text(
+                                    repo.description ?? 'No description',
+                                  ),
+                            trailing: isGrid
+                                ? null
+                                : Text(repo.language ?? 'No language'),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          isGrid
+                              ? const SizedBox.shrink()
+                              : Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text('Stars'),
+                                      Text(repo.watchers_count.toString()),
+                                    ],
+                                  ),
+                                ),
+                          isGrid
+                              ? const SizedBox.shrink()
+                              : Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text('Created At'),
+                                      Text(createdAtReadable),
+                                    ],
+                                  ),
+                                ),
+                          isGrid
+                              ? const SizedBox.shrink()
+                              : Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text('Updated At'),
+                                      Text(updatedAtReadable),
+                                    ],
+                                  ),
+                                ),
+                        ],
+                      ),
+                    );
+                  },
+                  closedColor: Theme.of(context).colorScheme.background,
+                  closedElevation: 0,
+                  transitionDuration: const Duration(milliseconds: 500),
+                  openBuilder: (c, b) {
+                    return GithubRepoDetailScreen(
+                      repo: repo,
+                    );
+                  },
                 );
               },
             );
@@ -140,15 +220,6 @@ class _GithubReposScreenState extends State<GithubReposScreen> {
           }
           return Container();
         },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          // context.watch<GithubRepoFetchBloc>().
-          // BlocProvider.of<GithubRepoFetchBloc>(context).add(
-          //   GithubRepoFetchPaginated(username),
-          // );
-        },
-        child: Text('Nxt'),
       ),
     );
   }
