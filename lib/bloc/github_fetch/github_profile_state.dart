@@ -29,7 +29,6 @@ class GithubProfileLoaded extends GithubProfileState {
   );
 }
 
-// TODO: implement GithubProfileError
 class GithubProfileError extends GithubProfileState {
   final GithubProfiles profile = GithubProfiles.errorProfile;
   final String message;
