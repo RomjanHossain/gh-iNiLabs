@@ -1,18 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gh/bloc/github_fetch/github_profile_bloc.dart';
 import 'package:gh/models/github_profile_mode.dart';
+import 'package:gh/screens/homepage/components/fab.dart';
 import 'package:intl/intl.dart';
+
+import '../../bloc/dark_mode/cubit/theme_mode_cubit.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
 
-  final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    ScrollController _scrollController = ScrollController();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Github Profile'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              context.read<ThemeModeCubit>().toggleTheme();
+            },
+            icon: context.watch<ThemeModeCubit>().state
+                ? const Icon(Icons.dark_mode)
+                : const Icon(Icons.light_mode),
+          ),
+        ],
       ),
       body: BlocConsumer<GithubProfileBloc, GithubProfileState>(
         listener: (context, state) {},
@@ -41,6 +55,7 @@ class MyHomePage extends StatelessWidget {
             String updatedAtReadable =
                 DateFormat('MMMM d, yyyy at h:mm a').format(updatedDateTime);
             return ListView(
+              controller: _scrollController,
               children: [
                 Stack(
                   children: [
@@ -67,7 +82,7 @@ class MyHomePage extends StatelessWidget {
                 ),
                 Center(
                   child: Text(
-                    ghProfile.name,
+                    ghProfile.name ?? '',
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -84,7 +99,7 @@ class MyHomePage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      ghProfile.bio,
+                      ghProfile.bio ?? '',
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
@@ -108,7 +123,7 @@ class MyHomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Icon(Icons.location_city),
-                            Text(ghProfile.location),
+                            Text(ghProfile.location ?? ''),
                           ],
                         ),
                       ),
@@ -118,7 +133,7 @@ class MyHomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Icon(Icons.link),
-                            Text(ghProfile.blog),
+                            Text(ghProfile.blog ?? ''),
                           ],
                         ),
                       ),
@@ -128,7 +143,7 @@ class MyHomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Icon(Icons.build_rounded),
-                            Text(ghProfile.twitter_username),
+                            Text(ghProfile.twitter_username ?? ''),
                           ],
                         ),
                       ),
@@ -230,60 +245,8 @@ class MyHomePage extends StatelessWidget {
           return Container();
         },
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () async {
-          // show a dialog to search for a profile
-          await showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                title: const Text('Search Profile'),
-                content: TextField(
-                  controller: _controller,
-                  decoration: const InputDecoration(
-                    hintText: 'Enter a Github username',
-                  ),
-                ),
-                actions: [
-                  TextButton(
-                    onPressed: () {
-                      _controller.clear();
-                      Navigator.pop(context);
-                    },
-                    child: const Text('Cancel'),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      // check if the textfield is empty
-                      if (_controller.text.isEmpty) {
-                        // show a snackbar
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Please enter a username'),
-                          ),
-                        );
-                        return;
-                      }
-                      // search for the profile
-                      BlocProvider.of<GithubProfileBloc>(context).add(
-                        GithubProfileSearch(_controller.text),
-                      );
-                      _controller.clear();
-                      Navigator.pop(context, _controller.text);
-                    },
-                    child: const Text('Search'),
-                  ),
-                ],
-              );
-            },
-          );
-        },
-        label: const Row(
-          children: [
-            Icon(Icons.search),
-            Text('Search Profile'),
-          ],
-        ),
+      floatingActionButton: CustomFAB(
+        scrollController: _scrollController,
       ),
     );
   }
