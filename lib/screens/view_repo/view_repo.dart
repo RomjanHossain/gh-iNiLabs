@@ -10,7 +10,6 @@ class GithubRepoDetailScreen extends StatelessWidget {
     // Create a DateTime object from each timestamp.
     DateTime createdDateTime = DateTime.parse(repo.created_at);
     DateTime updatedDateTime = DateTime.parse(repo.updated_at);
-
     // Format the DateTime objects to human-readable strings.
     String createdAtReadable =
         DateFormat('MMMM d, yyyy').format(createdDateTime);
@@ -47,6 +46,15 @@ class GithubRepoDetailScreen extends StatelessWidget {
             subtitle: Text(repo.pushed_at.toString()),
           ),
           ListTile(
+            title: const Text('Repo Size'),
+            isThreeLine: true,
+            subtitle: repo.size > 1024
+                ? Text(
+                    '${(repo.size / 1024).toStringAsFixed(2)} MB',
+                  )
+                : Text('${repo.size} KB'),
+          ),
+          ListTile(
             title: const Text('Forks'),
             subtitle: Text(repo.forks.toString()),
           ),
@@ -62,6 +70,18 @@ class GithubRepoDetailScreen extends StatelessWidget {
             title: const Text('Default Branch'),
             subtitle: Text(repo.default_branch),
           ),
+
+          // show more details
+          ListTile(
+            title: const Text('Is Private'),
+            isThreeLine: true,
+            subtitle: Text(repo.private.toString()),
+          ),
+          ListTile(
+            title: const Text('Owner'),
+            isThreeLine: true,
+            subtitle: Text(repo.owner.login),
+          ),
           ListTile(
             title: const Text('License'),
             isThreeLine: repo.license != null,
@@ -74,12 +94,6 @@ class GithubRepoDetailScreen extends StatelessWidget {
                     ],
                   )
                 : const Text('No license'),
-          ),
-          // show more details
-          ListTile(
-            title: const Text('Owner'),
-            isThreeLine: true,
-            subtitle: Text(repo.owner.login),
           ),
         ],
       ),
