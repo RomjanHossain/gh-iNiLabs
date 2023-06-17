@@ -247,7 +247,9 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ),
                   closedColor: Theme.of(context).primaryColor,
-                  openBuilder: (context, action) => const GithubReposScreen(),
+                  openBuilder: (context, action) => GithubReposScreen(
+                    username: ghProfile.login,
+                  ),
                 ),
               ],
             );
