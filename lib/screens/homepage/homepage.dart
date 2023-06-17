@@ -6,10 +6,18 @@ import 'package:gh/bloc/github_fetch/github_profile_bloc.dart';
 import 'package:gh/models/github_profile_mode.dart';
 import 'package:gh/screens/homepage/components/fab.dart';
 import 'package:gh/screens/repopage/repo_page.dart';
+import 'package:gh/shapes/created.dart';
+import 'package:gh/shapes/following.dart';
+import 'package:gh/shapes/github.dart';
+import 'package:gh/shapes/link.dart';
+import 'package:gh/shapes/location.dart';
+import 'package:gh/shapes/twitter.dart';
 import 'package:intl/intl.dart';
 
 import '../../bloc/dark_mode/cubit/theme_mode_cubit.dart';
 import '../../bloc/github_repo/github_repo_fetch_bloc.dart';
+import '../../shapes/follower.dart';
+import '../../shapes/update.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
@@ -125,7 +133,11 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.location_city),
+                            //! location
+                            CustomPaint(
+                              painter: LocationPainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(ghProfile.location ?? ''),
                           ],
                         ),
@@ -135,7 +147,10 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.link),
+                            CustomPaint(
+                              painter: LinkPainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(ghProfile.blog ?? ''),
                           ],
                         ),
@@ -145,7 +160,10 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.build_rounded),
+                            CustomPaint(
+                              painter: TwitterPainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(ghProfile.twitter_username ?? ''),
                           ],
                         ),
@@ -155,7 +173,10 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.follow_the_signs),
+                            CustomPaint(
+                              painter: FollowingPainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(ghProfile.following.toString()),
                           ],
                         ),
@@ -165,7 +186,10 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.pest_control_rodent),
+                            CustomPaint(
+                              painter: FollowerPainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(ghProfile.followers.toString()),
                           ],
                         ),
@@ -175,7 +199,10 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.report),
+                            CustomPaint(
+                              painter: GithubPainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(ghProfile.public_repos.toString()),
                           ],
                         ),
@@ -185,27 +212,10 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.report),
-                            Text(ghProfile.public_gists.toString()),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Icon(Icons.report),
-                            Text(ghProfile.public_gists.toString()),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Icon(Icons.report),
+                            CustomPaint(
+                              painter: CreatedPainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(createdAtReadable),
                           ],
                         ),
@@ -215,7 +225,10 @@ class MyHomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(Icons.report),
+                            CustomPaint(
+                              painter: UpdatePainter(),
+                              size: const Size(20, 20),
+                            ),
                             Text(updatedAtReadable),
                           ],
                         ),
