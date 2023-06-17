@@ -120,7 +120,7 @@ class _GithubReposScreenState extends State<GithubReposScreen> {
                 final repo = state.GithubRepoFetchModel[index];
                 if (index == state.GithubRepoFetchModel.length - 1 &&
                     state.hasMore) {
-                  print('has more -> ${state.hasMore},\nindex -> $index');
+                  // print('has more -> ${state.hasMore},\nindex -> $index');
                   BlocProvider.of<GithubRepoFetchBloc>(context).add(
                     GithubRepoFetchPaginated(widget.username, state.pageNumber),
                   );

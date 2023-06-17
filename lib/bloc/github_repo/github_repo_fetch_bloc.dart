@@ -1,4 +1,3 @@
-
 import 'package:bloc/bloc.dart';
 import 'package:gh/models/github_repo_model.dart';
 import 'package:gh/utils/status_.dart';
@@ -17,7 +16,7 @@ class GithubRepoFetchBloc
     on<GithubRepoSearchEvent>(_githubRepoSearch);
 
     on<TestEvent>(((event, emit) {
-      print('fuck the test event');
+      // print('fuck the test event');
     }));
     on<GithubRepoFetchPaginated>(_githubRepoNxt);
   }
@@ -42,7 +41,7 @@ class GithubRepoFetchBloc
   }
 
   void testEvent(event, emit) async {
-    print('est event');
+    // print('est event');
   }
 
   void _githubRepoNxt(event, emit) async {
@@ -58,7 +57,7 @@ class GithubRepoFetchBloc
       ErrorStatus(execption: final execption) => execption.toString(),
     };
     if (value is (List<GithutRepoModel>, bool, int)) {
-      print('has values and adding to the list');
+      // print('has values and adding to the list');
       // emit(value);
       List<GithutRepoModel> newList = value.$1;
       // add this newList to the previous list

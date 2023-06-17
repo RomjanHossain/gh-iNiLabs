@@ -5,10 +5,8 @@ abstract class GithubRepoFetchState {}
 
 class GithubRepoFetchInitial extends GithubRepoFetchState {}
 
-// TODO: implement GithubRepoFetchLoading
 class GithubRepoFetchLoading extends GithubRepoFetchState {}
 
-// TODO: implement GithubRepoFetchLoaded
 class GithubRepoFetchLoaded extends GithubRepoFetchState {
   final List<GithutRepoModel> GithubRepoFetchModel;
   final bool hasMore;
