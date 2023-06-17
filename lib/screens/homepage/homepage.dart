@@ -1,12 +1,15 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gh/bloc/github_fetch/github_profile_bloc.dart';
 import 'package:gh/models/github_profile_mode.dart';
 import 'package:gh/screens/homepage/components/fab.dart';
+import 'package:gh/screens/repopage/repo_page.dart';
 import 'package:intl/intl.dart';
 
 import '../../bloc/dark_mode/cubit/theme_mode_cubit.dart';
+import '../../bloc/github_repo/github_repo_fetch_bloc.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
@@ -223,21 +226,28 @@ class MyHomePage extends StatelessWidget {
                 // Text(_ghProfile.company),
                 // Text(_ghProfile.email),
                 // a button to visit the repos
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => GithubReposScreen(
-                      //       username: _ghProfile.login,
-                      //     ),
-                      //   ),
-                      // );
-                    },
-                    child: const Text('View Repos'),
+                OpenContainer(
+                  closedBuilder: (context, action) => Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        BlocProvider.of<GithubRepoFetchBloc>(context)
+                            .add(GithubRepoSearchEvent(
+                          ghProfile.login,
+                        ));
+                        action();
+                      },
+                      child: const Text('View Repos'),
+                    ),
                   ),
+                  transitionDuration: const Duration(milliseconds: 500),
+                  closedShape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(50),
+                    ),
+                  ),
+                  closedColor: Theme.of(context).primaryColor,
+                  openBuilder: (context, action) => const GithubReposScreen(),
                 ),
               ],
             );
