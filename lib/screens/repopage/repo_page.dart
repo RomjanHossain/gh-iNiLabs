@@ -5,6 +5,7 @@ import 'package:gh/screens/view_repo/view_repo.dart';
 import 'package:intl/intl.dart';
 
 import '../../bloc/github_repo/github_repo_fetch_bloc.dart';
+import '../../utils/get_painter.dart';
 
 enum SortBy {
   name,
@@ -154,7 +155,18 @@ class _GithubReposScreenState extends State<GithubReposScreen> {
                                   ),
                             trailing: isGrid
                                 ? null
-                                : Text(repo.language ?? 'No language'),
+                                : repo.language != null
+                                    ? repo.language == 'Dart'
+                                        ? const FlutterLogo()
+                                        : getLanguagePainter(repo.language!) !=
+                                                null
+                                            ? CustomPaint(
+                                                painter: getLanguagePainter(
+                                                    repo.language!),
+                                                size: const Size(30, 30),
+                                              )
+                                            : const Text('No language')
+                                    : const Text('No language'),
                           ),
                           const SizedBox(
                             height: 10,
