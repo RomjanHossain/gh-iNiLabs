@@ -11,8 +11,12 @@ class GithubRepoFetchLoading extends GithubRepoFetchState {}
 // TODO: implement GithubRepoFetchLoaded
 class GithubRepoFetchLoaded extends GithubRepoFetchState {
   final List<GithutRepoModel> GithubRepoFetchModel;
+  final bool hasMore;
+  int pageNumber = 2;
   GithubRepoFetchLoaded(
     this.GithubRepoFetchModel,
+    this.hasMore,
+    this.pageNumber,
   );
 }
 
