@@ -13,11 +13,12 @@ class GithubProfileModel {
   final String followers_url;
   final String following_url;
   final String repos_url;
-  final String name;
-  final String blog;
-  final String location;
-  final String bio;
-  final String twitter_username;
+  final String? name;
+  final String? company;
+  final String? blog;
+  final String? location;
+  final String? bio;
+  final String? twitter_username;
   final int public_repos;
   final int public_gists;
   final int followers;
@@ -34,11 +35,12 @@ class GithubProfileModel {
     required this.followers_url,
     required this.following_url,
     required this.repos_url,
-    required this.name,
-    required this.blog,
-    required this.location,
-    required this.bio,
-    required this.twitter_username,
+    this.name,
+    this.blog,
+    this.location,
+    this.bio,
+    this.twitter_username,
+    this.company,
     required this.public_repos,
     required this.public_gists,
     required this.followers,
