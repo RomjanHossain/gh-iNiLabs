@@ -49,4 +49,4 @@ A Flutter Project using the Github API to search for users and repositories.
 </table>
 
 
-## Goto Release Page to download the apk file
+## Goto [Release Page](https://github.com/RomjanHossain/gh-iNiLabs/releases) to download the apk file
