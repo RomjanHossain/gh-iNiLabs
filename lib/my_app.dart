@@ -4,6 +4,8 @@ import 'package:gh/bloc/dark_mode/cubit/theme_mode_cubit.dart';
 import 'package:gh/bloc/github_fetch/github_profile_bloc.dart';
 import 'package:gh/screens/homepage/homepage.dart';
 
+import 'bloc/github_repo/github_repo_fetch_bloc.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -12,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => GithubProfileBloc()),
+        BlocProvider(create: (context) => GithubRepoFetchBloc()),
         BlocProvider(create: (context) => ThemeModeCubit()),
       ],
       child: BlocConsumer<ThemeModeCubit, bool>(
@@ -19,10 +22,10 @@ class MyApp extends StatelessWidget {
         builder: (context, state) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'Github API',
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(
-                seedColor: Colors.pinkAccent,
+                seedColor: Colors.greenAccent,
                 brightness: state ? Brightness.light : Brightness.dark,
               ),
               useMaterial3: true,
