@@ -111,13 +111,13 @@ class PythonPainter extends CustomPainter {
         size.height * 0.07313672);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.shader = ui.Gradient.linear(
+    Paint paint0Fill = Paint()..style = PaintingStyle.fill;
+    paint0Fill.shader = ui.Gradient.linear(
         Offset(size.width * 1.751873, size.height * 0.9362676),
         Offset(size.width * 2.721918, size.height * 0.1016758),
-        [Color(0xff5a9fd4).withOpacity(1), Color(0xff306998).withOpacity(1)],
+        [const Color(0xff5a9fd4).withOpacity(1), const Color(0xff306998).withOpacity(1)],
         [0, 1]);
-    canvas.drawPath(path_0, paint_0_fill);
+    canvas.drawPath(path_0, paint0Fill);
 
     Path path_1 = Path();
     path_1.moveTo(size.width * 0.7674355, size.height * 0.2549824);
@@ -217,13 +217,13 @@ class PythonPainter extends CustomPainter {
         size.height * 0.8302715);
     path_1.close();
 
-    Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
-    paint_1_fill.shader = ui.Gradient.linear(
+    Paint paint1Fill = Paint()..style = PaintingStyle.fill;
+    paint1Fill.shader = ui.Gradient.linear(
         Offset(size.width * 3.096928, size.height * -40.33809),
         Offset(size.width * 2.750543, size.height * 0.08669141),
-        [Color(0xffffd43b).withOpacity(1), Color(0xffffe873).withOpacity(1)],
+        [const Color(0xffffd43b).withOpacity(1), const Color(0xffffe873).withOpacity(1)],
         [0, 1]);
-    canvas.drawPath(path_1, paint_1_fill);
+    canvas.drawPath(path_1, paint1Fill);
   }
 
   @override
